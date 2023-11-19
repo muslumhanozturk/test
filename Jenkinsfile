@@ -10,4 +10,14 @@ pipeline {
             }
         }
     }
+
+    post {
+        success {
+            slackSend channel: '#keypair-wallet', color: 'good', message: "Build başarıyla tamamlandı: ${currentBuild.fullDisplayName}"
+        }
+        failure {
+            slackSend channel: '#keypair-wallet', color: 'danger', message: "Build başarısız oldu: ${currentBuild.fullDisplayName}"
+        }
+    }
 }
+
