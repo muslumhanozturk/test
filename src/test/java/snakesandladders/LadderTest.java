@@ -1,0 +1,8 @@
+package snakesandladders;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class LadderTest {
+
+
+}
